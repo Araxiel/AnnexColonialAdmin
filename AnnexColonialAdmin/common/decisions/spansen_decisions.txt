@@ -8,13 +8,13 @@
 	}
 	
 	possible = {
-		NOT = {
-			custom_tooltip = {
-				text = spansen_currently_annexing_tt
-				has_variable = spansen_annexing_var
-			}
+		custom_tooltip = {
+			text = spansen_currently_annexing_tt
+			NOT = { has_variable = spansen_annexing_var }
+			NOT = { has_variable = spansen_annex_cooldown_var }
 		}
 		spansen_check_if_colonies_with_subject_var = yes
+
 	}
 	
 	when_taken = {

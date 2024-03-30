@@ -60,20 +60,29 @@ spansen.2 = {
 		
 		annex_with_incorporation = scope:spansen_annex_target
 		custom_label = spansen_they_will_be_incorporated_tt
-		remove_variable = spansen_annexing_var
+		set_variable = {
+			name = spansen_annex_cooldown_var
+			days = 7
+		}
 	}
 	## No incorporation
 	option = {
 		name = spansen.2.b 
 		
 		annex = scope:spansen_annex_target
-		remove_variable = spansen_annexing_var
+		set_variable = {
+			name = spansen_annex_cooldown_var
+			days = 7
+		}
 	}
 	## don't
 	option = {
 		name = spansen.2.c
 		
 		custom_label = spansen_do_nothing_tt
+	}
+	
+	after = {
 		remove_variable = spansen_annexing_var
 	}
 }
