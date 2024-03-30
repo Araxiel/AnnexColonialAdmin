@@ -1,0 +1,19 @@
+﻿l_english: 
+
+  spansen_decision: "Reincorporate African Colony"
+  spansen_decision_desc: "The experiment with our Colonial Administration has run its course and we should reincorporate them into our nation."
+  spansen_currently_annexing_tt: "Not currently annexing Colonial Administration"
+  spansen_check_if_colonies_with_subject_var_tt: "Has any African Colonial Administrations"
+
+  spansen_decision_target_tt: "One of our Colonial Administrations will start getting annexed."
+
+  spansen.1.t: "Begin of Annexation"
+
+  spansen.2.t: "Annexation of [SCOPE.sCountry('spansen_annex_target').GetName]"
+  spansen.2.d: "Annex the Colonial Administration of [SCOPE.sCountry('spansen_annex_target').GetName]"
+  spansen.2.f: ""The [SCOPE.sCharacter('spansen_annex_target_ruler').GetPrimaryRoleTitle] [SCOPE.sCharacter('spansen_annex_target_ruler').GetFullName] has done an inadequate job and will be imminently called back to [SCOPE.sState('spansen_capital').GetNameNoFormatting]""
+  spansen.2.a: "Reincorporate them"
+  spansen.2.b: "Annex them, without reincorporation"
+  spansen_they_will_be_incorporated_tt: "The states will all be fully incorporated"
+  spansen.2.c: "Later perhaps"
+  spansen_do_nothing_tt: "Nothing Happens"

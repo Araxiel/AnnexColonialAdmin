@@ -1,0 +1,79 @@
+﻿namespace = spansen
+
+spansen.1 = {
+	type = country_event
+	placement = scope:spansen_annex_target
+	
+	hidden = yes
+	
+	immediate = {
+		scope:spansen_overlord = {
+			trigger_event = spansen.2
+		}
+	}
+}
+
+## annex all
+spansen.2 = {
+	type = country_event
+	placement = scope:spansen_annex_target
+
+	duration = 3
+
+	title = spansen.2.t
+	desc = spansen.2.d
+	flavor = spansen.2.f
+
+	event_image = {
+		video = "africa_soldiers_breaking_protest"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
+
+	trigger = {
+		has_variable = spansen_annexing_var
+	}
+	
+	cancellation_trigger = {
+		NOT = {
+			has_variable = spansen_annexing_var
+		}
+	}
+	
+	immediate = {
+		capital = {
+			save_scope_as = spansen_capital
+		}
+		scope:spansen_annex_target = {
+			ruler = {
+				save_scope_as = spansen_annex_target_ruler
+			}
+		}
+	}
+	
+	## annex them
+	option = {
+		name = spansen.2.a 
+		default_option = yes
+		
+		annex_with_incorporation = scope:spansen_annex_target
+		custom_label = spansen_they_will_be_incorporated_tt
+		remove_variable = spansen_annexing_var
+	}
+	## No incorporation
+	option = {
+		name = spansen.2.b 
+		
+		annex = scope:spansen_annex_target
+		remove_variable = spansen_annexing_var
+	}
+	## don't
+	option = {
+		name = spansen.2.c
+		
+		custom_label = spansen_do_nothing_tt
+		remove_variable = spansen_annexing_var
+	}
+}

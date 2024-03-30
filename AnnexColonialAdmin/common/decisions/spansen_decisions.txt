@@ -1,0 +1,41 @@
+﻿spansen_decision = {
+	
+	is_shown = {
+		is_player = yes
+		any_subject_or_below = {
+			country_is_in_africa = yes
+		}
+	}
+	
+	possible = {
+		NOT = {
+			custom_tooltip = {
+				text = spansen_currently_annexing_tt
+				has_variable = spansen_annexing_var
+			}
+		}
+		spansen_check_if_colonies_with_subject_var = yes
+	}
+	
+	when_taken = {
+		set_variable = {
+			name = spansen_annexing_var
+			# months = 12
+		}
+		save_scope_as = spansen_overlord
+		random_subject_or_below = {
+			limit = {
+				spansen_check_any_colony_vars = yes
+			}
+			save_scope_as = spansen_annex_target
+			custom_tooltip = {
+				text = spansen_decision_target_tt
+				trigger_event = spansen.1
+			}
+		}
+	}
+
+	ai_chance = {
+		base = 0
+	}
+}

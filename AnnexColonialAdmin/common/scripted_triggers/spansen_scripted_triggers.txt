@@ -1,0 +1,20 @@
+spansen_check_any_colony_vars = {
+	OR = {
+		has_variable = niger_subject_var
+		has_variable = senegal_subject_var
+		has_variable = southern_africa_subject_var
+		has_variable = ethiopia_subject_var
+		has_variable = zanj_subject_var
+		has_variable = congo_subject_var
+	}
+}
+
+spansen_check_if_colonies_with_subject_var = {
+	custom_tooltip = {
+		text = spansen_check_if_colonies_with_subject_var_tt
+		any_subject_or_below = {
+			spansen_check_any_colony_vars = yes
+			has_subject_relation_with = root
+		}
+	}
+}
