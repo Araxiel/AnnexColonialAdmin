@@ -1,4 +1,4 @@
-spansen_check_any_colony_vars = {
+﻿spansen_check_any_colony_vars = {
 	OR = {
 		has_variable = niger_subject_var
 		has_variable = senegal_subject_var
