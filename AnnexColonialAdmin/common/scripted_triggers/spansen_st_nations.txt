@@ -1,0 +1,8 @@
+﻿spansen_one_of_us = {
+	OR = {
+		c:SPA ?= this
+		c:AUS ?= this
+		c:PRU ?= this
+		c:PRU ?= this
+	}
+}
